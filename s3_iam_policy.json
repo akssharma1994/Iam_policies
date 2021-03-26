@@ -1,0 +1,32 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListAllMybuckets",
+                "s3:GetBucketLocation"
+            ],
+            "Resource": "arn:aws:s3:::*"
+        },
+        {
+            "Sid": "ListObjectsInBuckets",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListAllMyBuckets"
+            ],
+            "Resource": [
+                "arn:aws:s3:::cat-pics8077103273",
+                "arn:aws:s3:::dog-pics8077103273"
+            ]
+        },
+        {
+            "Sid": "AllowObjectActions",
+            "Effect": "Allow",
+            "Action": "s3:*object",
+            "Resource": [
+                "arn:aws:s3:::dog-pic8077103273"
+            ]
+        }
+    ]
+}
